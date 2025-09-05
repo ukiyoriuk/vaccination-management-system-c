@@ -27,6 +27,7 @@ The project is split into two modules:
   - Sort vaccination batches by `lotID` (asc) and vaccine name (desc) using Quicksort.
 
 ## Project Structure
+```
 code/
 ├── UOCCovid19Vaccine/         # Core library
 │   ├── include/               # Header files
@@ -41,7 +42,7 @@ docs/
 ├── PR1.pdf                    # Assignment PR1
 ├── PR2.pdf                    # Assignment PR2
 └── PR3.pdf                    # Assignment PR3
-
+```
 ## Build & Run
 # Build application (with main)
 gcc -std=c11 -Wall -Wextra -Wpedantic -O2 \
