@@ -37,7 +37,6 @@ code/
 │   └── test/                  # Test framework and cases
 │       ├── include/
 │       └── src/
-├── UOCProgrammeEC.workspace   # IDE workspace (can be ignored)
 docs/
 ├── PR1.pdf                    # Assignment PR1
 ├── PR2.pdf                    # Assignment PR2
