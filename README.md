@@ -1,29 +1,36 @@
-# UOC Covid-19 Vaccination Programme
+# Vaccination Management System
 
-This project simulates a Covid-19 vaccination programme with data structures implemented in C.
-
-## Overview
-The project is split into two modules:
-
-- **code/UOCCovid19Vaccine/** — Core library with data types and operations:
-  - Countries
-  - Vaccines and batches
-  - Patients and vaccination queues
-
-- **code/UOCProgrammeEC/** — Programme entry point and automated test suite covering PR1, PR2 and PR3.
+A C-based system that simulates a complete vaccination programme, from managing countries and vaccine developers to administering doses and tracking patient data. It implements custom data structures (lists, queues, tables) and algorithms (recursion, search, sorting) to provide realistic vaccination process management.
 
 ## Features
-- **PR1 — Lists and Tables**
-  - Manage countries, vaccines, developers.
-  - Store and update vaccination batches (linked list).
-- **PR2 — Queues and Vaccination Process**
-  - Patient queue by country.
-  - Inoculation of first and second doses.
-  - Eligibility rules by group (e.g., AstraZeneca restrictions, Janssen single dose).
-  - Percentage of fully vaccinated patients.
-- **PR3 — Search and Sorting**
-  - Count patients vaccinated with a specific batch (queue traversal).
-  - Sort vaccination batches by `lotID` (asc) and vaccine name (desc) using Quicksort.
+
+### Countries & Vaccines
+- Manage **countries** (EU and non-EU).
+- Register **developers** and associate them with vaccines.
+- Manage **vaccines** with attributes:
+  - Technology (Adenovirus, Inactivated, Peptidic, mRNA).
+  - Current clinical trial phase.
+  - Authorized countries.
+
+### Patients & Queues
+- Manage **patients** with name, ID, assigned vaccine, and doses received.
+- Store patients in **queues by country**, processed in order of arrival.
+- Enforce eligibility rules:
+  - AstraZeneca not allowed for groups 2 & 3 (elderly).
+  - Janssen requires only a single dose.
+
+### Vaccination Batches
+- Manage **vaccination batches** (lot ID, vaccine type, number of doses).
+- Store batches in a **linked list**.
+- Support insertion, deletion, retrieval, and traversal of batches.
+- Process first and second doses for patients in queues.
+- Track percentage of fully vaccinated patients.
+
+### Algorithms & Advanced Operations
+- **Recursion**: compare patient queues, count vaccinated by vaccine/technology.
+- **Search**: count patients vaccinated with a given batch.
+- **Sorting**: quicksort algorithm to order vaccination batches by `lotID` (asc) and vaccine name (desc).
+- **Statistics**: identify most used vaccine technology per country.
 
 ## Project Structure
 ```
@@ -55,4 +62,6 @@ gcc -std=c11 -Wall -Wextra -Wpedantic -O2 \
 ./uocvaccine
 
 ## Documentation
-See `docs/PR1.pdf`, `docs/PR2.pdf`, `docs/PR3.pdf` for assignment statements and requirements.
+- docs/PR1.pdf — Countries, vaccines, developers management.
+- docs/PR2.pdf — Patient queues, vaccination process and eligibility.
+- docs/PR3.pdf — Vaccine batches, recursion, search & sorting.
