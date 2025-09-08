@@ -1,7 +1,6 @@
-# UOC Covid-19 Vaccination Programme (C)
+# UOC Covid-19 Vaccination Programme
 
-Final project for the course **Prácticas de Programación** (UOC).  
-It simulates a Covid-19 vaccination programme with data structures implemented in C.
+This project simulates a Covid-19 vaccination programme with data structures implemented in C.
 
 ## Overview
 The project is split into two modules:
